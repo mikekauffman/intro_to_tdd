@@ -24,6 +24,7 @@ class KeyValueStore
 
   def get(key)
     @store[key]
+
   end
   def delete(key)
     @store.delete(key)
@@ -34,5 +35,10 @@ class KeyValueStore
     key_list << k
     end
     key_list
+  end
+  def clear
+    @store.each do |k,v|
+    @store.delete(k)
+    end
   end
 end

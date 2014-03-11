@@ -37,4 +37,16 @@ describe "KeyValue" do
 
     expect(actual_value).to eq expected_value
   end
+  it "allows user to clear the store of keys and values" do
+    key_value_store = KeyValueStore.new
+    key_value_store.add("foo", 1000)
+    key_value_store.add("fum", 500)
+    key_value_store.add("fie", 1500)
+
+    key_value_store.clear
+
+    expected_value = {}
+    actual_value = key_value_store.clear
+    expect(actual_value).to eq expected_value
+  end
 end
