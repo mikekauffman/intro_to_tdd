@@ -9,7 +9,7 @@ class LeapYear
   end
 
   def yes?
-    if  is_multiple_of?(4, @year) == true
+    if  is_multiple_of?(400, @year) && is_multiple_of?(100, @year) == true
     "yes"
     else
     "no"
