@@ -25,4 +25,14 @@ class KeyValueStore
   def get(key)
     @store[key]
   end
+  def delete(key)
+    @store.delete(key)
+  end
+  def show
+    key_list = Array.new
+    @store.each do |k,v|
+    key_list << k
+    end
+    key_list
+  end
 end
